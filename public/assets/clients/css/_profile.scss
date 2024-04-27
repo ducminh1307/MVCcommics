@@ -1,0 +1,98 @@
+.profile {
+    margin-top: 15px;
+    min-height: 73vh;
+    .menu-profile {
+        &-item {
+            padding: 5px 15px;
+            a {
+                display: inline-block;
+                background-color: #f33;
+                padding: 10px 5px;
+                color: #fff;
+                width: 161px;
+                border-radius: 5px;
+                text-align: center;
+                &:hover {
+                    background-color: #bd2424;
+                }
+            }
+        }
+    }
+    .menu-m-profile {
+        display: none;
+        width: 330px;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        i {
+            font-size: 30px;
+            &.fa-user {
+                color: #105fb9;
+            }
+            &.fa-key {
+                color: #ff0;
+            }
+            &.fa-heart {
+                color: #f33;
+            }
+            &.fa-history {
+                color: #0ed461;
+            }
+        }
+    }
+    .change-form {
+        width: 330px;
+    }
+    .form-group {
+        position: relative;
+        input[type='radio'] {
+            appearance: none;
+            &:checked + label {
+                border: 1px solid #f33;
+            }
+        }
+        label {
+            border-radius: 5px;
+            cursor: pointer;
+            img {
+                width: 55px;
+                height: 55px;
+            }
+        }
+        .sendotp, .count {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            background-color: #f33;
+            color: #fff;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 70px;
+            z-index: -10;
+            &.active {
+                z-index: 10;
+            }
+        }
+        .count {
+            background-color: #ff9090;;
+            cursor: default;
+        }
+    }
+}
+@include scr_768 {
+    .profile {
+        .menu-profile {
+            display: none;
+        }
+        .menu-m-profile {
+            display: flex;
+        }
+        .change-form {
+            margin: 0 auto;
+        }
+    }
+}

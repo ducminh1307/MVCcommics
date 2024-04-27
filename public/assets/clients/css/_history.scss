@@ -1,0 +1,86 @@
+.history {
+    margin-top: 15px;
+    min-height: 72vh;
+    .manga {
+        box-shadow: 0 0 10px #888;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        position: relative;
+        a {
+            .img {
+                height: 200px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                border-radius: 5px 5px 0 0;
+                overflow: hidden;
+            }
+            .name {
+                padding: 5px;
+                color: #000;
+                text-align: center;
+                height: 58px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                &:hover {
+                    color: #ff3333;
+                }
+            }
+        }
+        .chap {
+            position: absolute;
+            bottom: 60px;
+            left: 5px;
+            background-color: #2360e4be;
+            border-radius: 5px;
+            padding: 2px 4px;
+            color: #fff;
+            font-size: 13px;
+            i {
+                font-size: 12px;
+            }
+        }
+        &:hover {
+            .img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+@include scr_1199 {
+    .history {
+        .manga {
+            a {
+                .img {
+                    height: 260px;
+                }
+            }
+        }
+    }
+}
+@include scr_460 {
+    .history {
+        .manga {
+            a {
+                .img {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+@include scr_360 {
+    .history {
+        .manga {
+            a {
+                .img {
+                    height: 190px;
+                }
+            }
+        }
+    }
+}

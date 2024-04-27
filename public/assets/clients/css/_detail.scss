@@ -1,0 +1,232 @@
+.detail {
+    margin: 20px 0;
+    .manga-detail {
+        box-shadow: 0 0 10px #888;
+        padding: 10px;
+        border-radius: 5px;
+        .bread-crumb {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 3px 0;
+            i {
+                font-size: 13px;
+                margin: 0 5px;
+            }
+        }
+        .name {
+            font-size: 30px;
+            font-family: 'Patrick Hand SC', cursive;
+            font-weight: bold;
+            margin: .5em 0;
+        }
+        .imgs {
+            img {
+                width: 100%;
+            }
+        }
+        .info {
+            i {
+                font-size: 16px;
+                width: 20px;
+            }
+            .theloai {
+                display: inline-block;
+                margin-right: 5px;
+                color: #ff3333;
+                border: 1px solid #ff3333;
+                padding: 2px 5px;
+                border-radius: 5px;
+                margin-bottom: 3px;
+                font-size: 14px;
+                &:hover {
+                    color: #fff;
+                    background-color: #ff3333;
+                }
+            }
+            .chucnang {
+                padding: 5px 8px;
+                margin-top: 10px;
+                margin-right: 5px;
+                border-radius: 5px;
+                color: #fff;
+                &:nth-child(1){
+                    background-color: #17b85a;
+                    &:hover {
+                        filter: brightness(0.9);
+                    }
+                }
+                &:nth-child(2){
+                    background-color: #1785b8;
+                    &:hover {
+                        filter: brightness(0.9);
+                    }
+                }
+            }
+            .noidung {
+                text-align: justify;
+                line-height:24px;
+                &.hide {
+                    height: 96px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 4;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 24px;
+                        width: 100%;
+                        background-image: linear-gradient(transparent, #fff);
+                    }
+                }
+                &.show {
+                    display: block;
+                    overflow: unset;
+                    height: auto;
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            .read {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: 0.5s;
+                width: 100px;
+                color: #007bff;
+                i {
+                    margin-top: 2px;
+                    margin-left: 3px;
+                    transition: 0;
+                }
+            }
+        }
+        .tieude {
+            display: flex;
+            position: relative;
+            i {
+                font-size: 20px;
+                width: 20px;
+                margin-right: 5px;
+                margin-top: 3px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #888;
+            }
+        }
+        .chuong {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 264px;
+            &::-webkit-scrollbar {
+                width: 3px;
+            }
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 10px;
+            }
+            i {
+                font-size: 14px;
+            }
+            .top {
+                background-color: #fff;
+            }
+            .chap {
+                text-transform: capitalize;
+                color: #666;
+                &:hover {
+                    color: #007bff;
+                }
+            }
+            .tg {
+                font-style: italic;
+                color: #666;font-size: 13px;
+            }
+        }
+        .binhluan {
+            height: 264px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            &::-webkit-scrollbar {
+                width: 3px;
+            }
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 10px;
+            }
+            .binhluan-item {
+                display: flex;
+                .user-icon {
+                    width: 35px;
+                    height: 35px;
+                }
+                .binhluan-content {
+                    margin-left: 5px;
+                    background-color: #dfdfdf;
+                    width: 100%;
+                    padding: 3px 5px;
+                    border-radius: 5px;
+                }
+                .content-top {
+                    .tg {
+                        color: #888;
+                        font-style: italic;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include scr_460 {
+    .detail {
+        .bread-crumb {
+            font-size: 12px;
+        }
+        .mame {
+            font-size: 25px;
+        }
+        .manga-detail {
+            padding: 8px;
+            .info {
+                .author {
+                    margin-top: .5em;
+                }
+            }
+            .imgs {
+                img {
+                    width: 250px;
+                }
+            }
+            .binhluan {
+                .binhluan-item {
+                    font-size: 13px;
+                    .content-top {
+                        .tg {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

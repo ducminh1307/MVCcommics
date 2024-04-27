@@ -1,0 +1,120 @@
+.follow {
+    min-height: 72vh;
+    margin-top: 20px;
+    .title {
+        position: relative;
+        padding-left: 10px;
+        h2 {
+            font-family: 'Sigmar One', cursive;
+        }
+        &::before {
+            content:'';
+            width: 5px;
+            height: 100%;
+            background-color: #ff3333;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .manga {
+        box-shadow: 0 0 10px #888;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        position: relative;
+        a {
+            .img {
+                height: 200px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                border-radius: 5px 5px 0 0;
+                overflow: hidden;
+            }
+            .name {
+                padding: 5px;
+                color: #000;
+                text-align: center;
+                height: 58px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                &:hover {
+                    color: #ff3333;
+                }
+            }
+        }
+        .unfollow {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border-radius: 50%;
+            height: 25px;
+            width: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff3333b0;
+            box-shadow: 0 2px 5px #000;
+            z-index: 12;
+            i {
+                color: #fff;
+                font-size: 14px;
+            }
+            &:hover {
+                background-color: #ff3333da;
+            }
+        }
+        .chap {
+            position: absolute;
+            bottom: 60px;
+            left: 5px;
+            background-color: #2360e4be;
+            border-radius: 5px;
+            padding: 2px 4px;
+            color: #fff;
+            font-size: 13px;
+        }
+        &:hover {
+            .img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+@include scr_1199 {
+    .follow {
+        .manga {
+            a {
+                .img {
+                    height: 260px;
+                }
+            }
+        }
+    }
+}
+@include scr_460 {
+    .follow {
+        .manga {
+            a {
+                .img {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+@include scr_360 {
+    .follow {
+        .manga {
+            a {
+                .img {
+                    height: 190px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+<?php
+    $routes['default_controller'] = 'Home';
+    $routes['trang-chu'] = 'home/index';
+    $routes['dang-nhap'] = 'user/index';
+    $routes['dang-ky'] = 'user/dangky';
+    $routes['quen-mat-khau'] = 'user/forgot';
+    $routes['xu-ly-dang-nhap'] = 'user/xulydangnhap';
+    $routes['dang-xuat'] = 'user/dangxuat';
+    $routes['truyen-tranh/(.+)-(\d+)'] = 'home/truyen/$1/$2';
+    $routes['truyen-tranh/(.+)/(.+)'] = 'chap/index/$1/$2';
+    $routes['theo-doi'] = 'home/theodoi';
+    $routes['xu-ly-dang-ky'] = 'user/xulydangky';
+    $routes['xoa-theo-doi'] = 'follow/unnFollow';
+    $routes['quan-tri'] = 'quantri/index';
+    $routes['quan-tri/quan-ly-menu'] = 'quantri/menu';
+    $routes['quan-tri/quan-ly-the-loai'] = 'quantri/type';
+    $routes['quan-tri/quan-ly-nguoi-dung'] = 'quantri/user';
+    $routes['quan-tri/quan-ly-truyen'] = 'quantri/comic';
+    $routes['quan-tri/quan-ly-binh-luan'] = 'quantri/cmt';
+    $routes['tim-kiem/(.+)'] = 'search/index/$1';
+    $routes['tim-kiem/(.+)/trang-(\d+)'] = 'search/index/$1/$2';
+    $routes['xu-ly-tim-kiem'] = 'search/search';
+    $routes['the-loai/(.+)'] = 'search/searchByType/$1';
+    $routes['the-loai/(.+)/trang-(\d+)'] = 'search/searchByType/$1/$2';
+    $routes['lich-su-doc'] = 'home/lichsu';
+    $routes['truyen-hot'] = 'home/truyenhot';
+    $routes['truyen-hot/trang-(\d+)'] = 'home/truyenhot/$1';
+    $routes['truyen-moi'] = 'home/truyenmoi';
+    $routes['truyen-moi/trang-(\d+)'] = 'home/truyenmoi/$1';
+    $routes['truyen-full'] = 'home/truyenfull';
+    $routes['truyen-full/trang-(\d+)'] = 'home/truyenfull/$1';
+    $routes['thong-tin-tai-khoan']= 'user/profile';
+    $routes['thay-doi-mat-khau']= 'user/pass';
+    $routes['doi-thong-tin']= 'user/changeProfile';
+    $routes['thay-mat-khau']= 'user/changePass';
+    $routes['404'] = 'loi/err404';
+?>

@@ -1,0 +1,30 @@
+@mixin scr_1199 {
+    @media only screen and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin scr_991 {
+    @media only screen and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin scr_768 {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin scr_576 {
+    @media only screen and (max-width: 576px) {
+        @content;
+    }
+}
+@mixin scr_460 {
+    @media only screen and (max-width: 460px) {
+        @content;
+    }
+}
+@mixin scr_360 {
+    @media only screen and (max-width: 360px) {
+        @content;
+    }
+}

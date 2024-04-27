@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Frijole&family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+* {
+    font-family: 'Quicksand', sans-serif;
+    transition: .3s;
+}
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    width: 100%;
+    overflow-x: hidden;
+    height: auto;
+    min-height: 100vh;
+    &.hide {
+        height: 100vh;
+        overflow: hidden;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+}
+button, input {
+    border: none;
+    background: #ffffff;
+    outline: none !important;
+    &.disabled {
+        cursor: not-allowed;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Calistoga', cursive;
+}
+i {
+    font-size: 25px;
+}
+a:hover {
+    text-decoration: none !important;
+}
+.logo {
+    img {
+        width: 140px !important;
+    }
+}
+.hide-screen {
+    background-color: #00000069;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: .5s;
+    &.show {
+        z-index: 997;
+        opacity: 1;
+    }
+}
+.thongbao {
+    color: #f00;
+    background-color: #ffd6d6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ff4d4d;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+    transition: all 1s;
+    transform: translateX(300px);
+    &.active {
+        transform: translateX(0);
+    }
+}
+.scroll-top {
+    background: #ff3333;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    border-radius: 5px;
+    cursor: pointer;
+    right: 20px;
+    bottom: 30px;
+    animation: top .5s infinite;
+    opacity: 0;
+    z-index: -1;
+    &.active {
+        opacity: 1;
+        z-index: 200;
+    }
+}
+@keyframes top {
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}

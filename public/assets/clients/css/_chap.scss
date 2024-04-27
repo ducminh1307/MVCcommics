@@ -1,0 +1,162 @@
+.chap {
+    margin: 15px 0;
+    .chap-content {
+        padding: 10px;
+    }
+    .bread-crumb {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 3px 0;
+        margin-bottom: 5px;
+        i {
+            font-size: 13px;
+            margin: 0 5px;
+        }
+    }
+    .name {
+        font-size: 25px;
+        margin-bottom: 5px;
+        span {
+            font-style: italic;
+            font-size: 18px;
+        }
+    }
+    .tutorial {
+        margin: 0 auto;
+        width: 320px;
+        margin-bottom: 15px;
+    }
+    .choose-chap {
+        a {
+            background-color: #f33;
+            color: #fff;
+            padding: 7px 10px;
+            border-radius: 5px;
+            i {
+                font-size: 15px;
+            }
+            &.disabled {
+                background-color: #bbb;
+                pointer-events: none;
+            }
+        }
+        select {
+            width: 150px;
+            padding: 5px 10px;
+            outline: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    }
+    .chap-images {
+        box-shadow: 0 0 5px #888;
+        padding: 15px 0;
+        border-radius: 5px;
+        img {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .comment {
+        .title {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .box-comment {
+            position: relative;
+            textarea {
+                width: 100%;
+                outline: none;
+                padding: 5px;
+                padding-right: 50px;
+                min-height: 50px;
+                resize: none;
+                border-radius: 5px;
+                border: 1px solid #aaa;
+                &:focus {
+                    border: 2px solid #ff3333;
+                }
+                &::-webkit-scrollbar {
+                    width: 0;
+                }
+            }
+            button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+        }
+        .comment-body {
+            .comments {
+                box-shadow: 0 0 5px #888;
+                border-radius: 5px;
+            }
+            .comment-item {
+                padding: 5px;
+                flex-wrap: wrap;
+                .ava {
+                    width: 50px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .comment-content {
+                    width: calc(100% - 58px);
+                    .comment-top {
+                        span {
+                            font-style: italic;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                display: flex;
+                margin-top: 15px;
+                justify-content: center;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 22px;
+                    margin: 0 2px;
+                    border-radius: 50%;
+                    width: 36px;
+                    height: 36px;
+                    color: #000;
+                    i {
+                        font-size: 20px;
+                    }
+                    &:hover {
+                        background-color: #aaa;
+                    }
+                    &.active {
+                        pointer-events: none;
+                        color: #fff;
+                        background-color: #f33;
+                    }
+                }
+            }
+        }
+    }
+}
+@include scr_991 {
+    .chap {
+        .chap-content {
+            padding: 0;
+        }
+        .chap-images {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+@include scr_460 {
+    .bread-crumb {
+        font-size: 12px;
+    }
+}
